@@ -1,0 +1,1 @@
+class TarjanData(var index: Int, var lowlink: Int, var onStack: Boolean)

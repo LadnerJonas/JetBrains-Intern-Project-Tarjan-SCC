@@ -1,3 +1,7 @@
+import java.lang.Integer.min
+import java.util.Stack
+import java.util.concurrent.atomic.AtomicInteger
+
 /**
  * A vertex in a graph.
  * @param <T>  the type of the payload.
@@ -18,6 +22,7 @@ internal interface Node<T> {
     val payload: T
 }
 
+
 internal object Task {
     /**
      * Calculates the strongly connected components of a directed acyclic graph using Tarjan's algorithm
@@ -28,7 +33,58 @@ internal object Task {
      * @return a list of strongly connected components of the specified graph
      */
     fun tarjan(graph: List<Node<*>?>?): List<List<Node<*>>>? {
-        // TODO implement me
-        return null
+        if (graph.isNullOrEmpty())
+            return null
+        val nodeTarjanData = HashMap<Node<*>, TarjanData>()
+
+        val current = AtomicInteger(0)
+        val stack = Stack<Node<*>?>()
+
+        val result = ArrayList<List<Node<*>>>()
+
+        graph
+            .forEach { v ->
+                if (v != null && !nodeTarjanData.containsKey(v))
+                    strongconnect(nodeTarjanData, result, current, stack, v)
+            }
+        return result
+    }
+
+    private fun strongconnect(
+        nodeTarjanData: HashMap<Node<*>, TarjanData>,
+        result: ArrayList<List<Node<*>>>,
+        current: AtomicInteger,
+        stack: Stack<Node<*>?>,
+        v: Node<*>?
+    ) {
+        // TODO: Input validation
+        if (v == null) {
+            return
+        }
+        stack.push(v)
+        val currentTarjanData = TarjanData(current.get(), current.getAndIncrement(), true)
+        nodeTarjanData[v] = currentTarjanData
+
+        v.adjacents()?.forEach { adj ->
+            if (!nodeTarjanData.containsKey(adj)) {
+                strongconnect(nodeTarjanData, result, current, stack, adj)
+                nodeTarjanData[adj]!!.lowlink = min(nodeTarjanData[adj]!!.lowlink, nodeTarjanData[v]!!.lowlink)
+
+            } else if (nodeTarjanData[adj]!!.onStack) {
+                nodeTarjanData[v]!!.lowlink = min(nodeTarjanData[adj]!!.lowlink, nodeTarjanData[v]!!.index)
+            }
+        }
+
+        if (nodeTarjanData[v]!!.index == nodeTarjanData[v]!!.lowlink) {
+            val scc = ArrayList<Node<*>>()
+            do {
+                val w = stack.pop()
+                if (w != null) {
+                    nodeTarjanData[w]!!.onStack = false
+                    scc.add(w)
+                }
+            } while (v != w)
+            result.add(scc)
+        }
     }
 }
