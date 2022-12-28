@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67ba79e9-ace6-4ed0-9d6c-a0e89a9f7ffc" name="Changes" comment="git init">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/TarjanData.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/TarjanNode.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/TarjanTests.kt" afterDir="false" />
+    <list default="true" id="67ba79e9-ace6-4ed0-9d6c-a0e89a9f7ffc" name="Changes" comment="implement tarjan">
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/TarjanTestHelper.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JetBrains-Intern-Projects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JetBrains-Intern-Projects.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Tarjan.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Tarjan.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TarjanNode.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TarjanNode.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TarjanTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TarjanTests.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,10 +51,20 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.TarjanTests">
+    <configuration name="TarjanTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JetBrains-Intern-Projects" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TarjanTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TarjanTests.simpleGraphs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JetBrains-Intern-Projects" />
       <option name="PACKAGE_NAME" value="" />
@@ -65,6 +77,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TarjanTests" />
         <item itemvalue="JUnit.TarjanTests.simpleGraphs" />
       </list>
     </recent_temporary>
@@ -78,7 +91,9 @@
       <option name="presentableId" value="Default" />
       <updated>1671964235201</updated>
       <workItem from="1671964236451" duration="1692000" />
-      <workItem from="1671970114852" duration="5345000" />
+      <workItem from="1671970114852" duration="5400000" />
+      <workItem from="1672175053906" duration="5618000" />
+      <workItem from="1672238721176" duration="662000" />
     </task>
     <task id="LOCAL-00001" summary="git init">
       <created>1671964444865</created>
@@ -87,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671964444865</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="implement tarjan">
+      <created>1671975511429</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671975511429</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,15 +117,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="git init" />
-    <option name="LAST_COMMIT_MESSAGE" value="git init" />
+    <MESSAGE value="implement tarjan" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement tarjan" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/Tarjan.kt</url>
-          <line>78</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/test/kotlin/TarjanTestHelper.kt</url>
+          <line>84</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

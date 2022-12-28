@@ -42,11 +42,10 @@ internal object Task {
 
         val result = ArrayList<List<Node<*>>>()
 
-        graph
-            .forEach { v ->
-                if (v != null && !nodeTarjanData.containsKey(v))
-                    strongconnect(nodeTarjanData, result, current, stack, v)
-            }
+        graph.forEach { v ->
+            if (v != null && !nodeTarjanData.containsKey(v))
+                strongconnect(nodeTarjanData, result, current, stack, v)
+        }
         return result
     }
 
@@ -57,7 +56,7 @@ internal object Task {
         stack: Stack<Node<*>?>,
         v: Node<*>?
     ) {
-        // TODO: Input validation
+        //TODO: Input validation
         if (v == null) {
             return
         }
