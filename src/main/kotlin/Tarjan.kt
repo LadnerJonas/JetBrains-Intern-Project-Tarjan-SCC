@@ -49,32 +49,38 @@ internal object Task {
         return result
     }
 
+    /**
+     * Generates the strongly connected component of a subgraph given by the [startingVertex]
+     */
+
     private fun strongconnect(
         nodeTarjanData: HashMap<Node<*>, TarjanData>,
         result: ArrayList<List<Node<*>>>,
         current: AtomicInteger,
         stack: Stack<Node<*>?>,
-        v: Node<*>?
+        startingVertex: Node<*>?
     ) {
         //TODO: Input validation
-        if (v == null) {
+        if (startingVertex == null) {
             return
         }
-        stack.push(v)
+        stack.push(startingVertex)
         val currentTarjanData = TarjanData(current.get(), current.getAndIncrement(), true)
-        nodeTarjanData[v] = currentTarjanData
+        nodeTarjanData[startingVertex] = currentTarjanData
 
-        v.adjacents()?.forEach { adj ->
+        startingVertex.adjacents()?.forEach { adj ->
             if (!nodeTarjanData.containsKey(adj)) {
                 strongconnect(nodeTarjanData, result, current, stack, adj)
-                nodeTarjanData[adj]!!.lowlink = min(nodeTarjanData[adj]!!.lowlink, nodeTarjanData[v]!!.lowlink)
+                nodeTarjanData[adj]!!.lowlink =
+                    min(nodeTarjanData[adj]!!.lowlink, nodeTarjanData[startingVertex]!!.lowlink)
 
             } else if (nodeTarjanData[adj]!!.onStack) {
-                nodeTarjanData[v]!!.lowlink = min(nodeTarjanData[adj]!!.lowlink, nodeTarjanData[v]!!.index)
+                nodeTarjanData[startingVertex]!!.lowlink =
+                    min(nodeTarjanData[adj]!!.lowlink, nodeTarjanData[startingVertex]!!.index)
             }
         }
 
-        if (nodeTarjanData[v]!!.index == nodeTarjanData[v]!!.lowlink) {
+        if (nodeTarjanData[startingVertex]!!.index == nodeTarjanData[startingVertex]!!.lowlink) {
             val scc = ArrayList<Node<*>>()
             do {
                 val w = stack.pop()
@@ -82,7 +88,7 @@ internal object Task {
                     nodeTarjanData[w]!!.onStack = false
                     scc.add(w)
                 }
-            } while (v != w)
+            } while (startingVertex != w)
             result.add(scc)
         }
     }
