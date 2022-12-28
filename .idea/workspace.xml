@@ -7,12 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67ba79e9-ace6-4ed0-9d6c-a0e89a9f7ffc" name="Changes" comment="implement tarjan">
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/TarjanTestHelper.kt" afterDir="false" />
+    <list default="true" id="67ba79e9-ace6-4ed0-9d6c-a0e89a9f7ffc" name="Changes" comment="Add basic testing framework">
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/TarjanEdgeCaseTests.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Tarjan.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Tarjan.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TarjanNode.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TarjanNode.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TarjanTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TarjanTests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TarjanTestHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/helper/TarjanTestHelper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TarjanTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TarjanFunctionalTests.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,37 +38,64 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="JUnit.TarjanTests">
-    <configuration name="TarjanTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="helper" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.All in JetBrains-Intern-Projects">
+    <configuration name="All in JetBrains-Intern-Projects" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JetBrains-Intern-Projects" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TarjanTests" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TarjanEdgeCaseTests.noExceptionInEdgeCases" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JetBrains-Intern-Projects" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TarjanEdgeCaseTests" />
+      <option name="METHOD_NAME" value="noExceptionInEdgeCases" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TarjanFunctionalTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JetBrains-Intern-Projects" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TarjanFunctionalTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TarjanTests.simpleGraphs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TarjanFunctionalTests.simpleGraphs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JetBrains-Intern-Projects" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TarjanTests" />
+      <option name="MAIN_CLASS_NAME" value="TarjanFunctionalTests" />
       <option name="METHOD_NAME" value="simpleGraphs" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -77,8 +104,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TarjanTests" />
-        <item itemvalue="JUnit.TarjanTests.simpleGraphs" />
+        <item itemvalue="JUnit.All in JetBrains-Intern-Projects" />
+        <item itemvalue="JUnit.TarjanEdgeCaseTests.noExceptionInEdgeCases" />
+        <item itemvalue="JUnit.TarjanFunctionalTests" />
+        <item itemvalue="JUnit.TarjanFunctionalTests.simpleGraphs" />
       </list>
     </recent_temporary>
   </component>
@@ -93,7 +122,8 @@
       <workItem from="1671964236451" duration="1692000" />
       <workItem from="1671970114852" duration="5400000" />
       <workItem from="1672175053906" duration="5618000" />
-      <workItem from="1672238721176" duration="662000" />
+      <workItem from="1672238721176" duration="1144000" />
+      <workItem from="1672239871963" duration="2838000" />
     </task>
     <task id="LOCAL-00001" summary="git init">
       <created>1671964444865</created>
@@ -109,26 +139,38 @@
       <option name="project" value="LOCAL" />
       <updated>1671975511429</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add basic testing framework">
+      <created>1672239443486</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672239443486</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="git init" />
     <MESSAGE value="implement tarjan" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement tarjan" />
+    <MESSAGE value="Add basic testing framework" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add basic testing framework" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/test/kotlin/TarjanTestHelper.kt</url>
-          <line>84</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/JetBrains_Intern_Projects$TarjanFunctionalTests.ic" NAME="TarjanFunctionalTests Coverage Results" MODIFIED="1672240691292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/JetBrains_Intern_Projects$All_in_JetBrains_Intern_Projects.ic" NAME="All in JetBrains-Intern-Projects Coverage Results" MODIFIED="1672241509337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
