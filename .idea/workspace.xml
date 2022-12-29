@@ -7,12 +7,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67ba79e9-ace6-4ed0-9d6c-a0e89a9f7ffc" name="Changes" comment="Add basic testing framework">
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/TarjanEdgeCaseTests.kt" afterDir="false" />
+    <list default="true" id="67ba79e9-ace6-4ed0-9d6c-a0e89a9f7ffc" name="Changes" comment="Refactor and improve documentation">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/helper/TarjanNodeData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/node/Node.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Tarjan.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Tarjan.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TarjanTestHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/helper/TarjanTestHelper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TarjanTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TarjanFunctionalTests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TarjanData.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TarjanNode.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/node/TarjanNode.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TarjanEdgeCaseTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TarjanEdgeCaseTests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TarjanFunctionalTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TarjanFunctionalTests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/helper/TarjanTestHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/helper/TarjanTestHelper.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="Kotlin Interface" />
       </list>
     </option>
   </component>
@@ -62,6 +67,8 @@
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="helper" />
+      <recent name="node" />
+      <recent name="Node" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.All in JetBrains-Intern-Projects">
@@ -123,7 +130,8 @@
       <workItem from="1671970114852" duration="5400000" />
       <workItem from="1672175053906" duration="5618000" />
       <workItem from="1672238721176" duration="1144000" />
-      <workItem from="1672239871963" duration="2838000" />
+      <workItem from="1672239871963" duration="3840000" />
+      <workItem from="1672328812321" duration="3396000" />
     </task>
     <task id="LOCAL-00001" summary="git init">
       <created>1671964444865</created>
@@ -146,7 +154,28 @@
       <option name="project" value="LOCAL" />
       <updated>1672239443486</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactor strongconnect">
+      <created>1672242858986</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672242858986</updated>
+    </task>
+    <task id="LOCAL-00005" summary="refactor test package and add more functional tests">
+      <created>1672242966930</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672242966930</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add edge case tests">
+      <created>1672242977208</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672242977208</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,7 +196,11 @@
     <MESSAGE value="git init" />
     <MESSAGE value="implement tarjan" />
     <MESSAGE value="Add basic testing framework" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add basic testing framework" />
+    <MESSAGE value="refactor strongconnect" />
+    <MESSAGE value="refactor test package and add more functional tests" />
+    <MESSAGE value="add edge case tests" />
+    <MESSAGE value="Refactor and improve documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor and improve documentation" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JetBrains_Intern_Projects$TarjanFunctionalTests.ic" NAME="TarjanFunctionalTests Coverage Results" MODIFIED="1672240691292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

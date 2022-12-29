@@ -1,23 +1,13 @@
 import helper.TarjanTestHelper.validateTarjanResults
+import node.Node
+import node.TarjanNode
 import org.junit.jupiter.api.Test
 
+/**
+ * Tests of the functionality of the tarjan algorithm implementation
+ */
+
 class TarjanFunctionalTests {
-    @Test
-    fun simpleGraphs() {
-        val graph = ArrayList<Node<Int>>()
-        val v0 = TarjanNode(0)
-        val v1 = TarjanNode(1)
-        v0.addAdjacentNode(v1)
-        graph.addAll(listOf(v0, v1))
-
-        validateTarjanResults(graph)
-
-        v1.addAdjacentNode(v0)
-
-        validateTarjanResults(graph)
-
-    }
-
     @Test
     fun wikipediaExample() {
         val graph = ArrayList<Node<Int>>()
@@ -35,6 +25,22 @@ class TarjanFunctionalTests {
         (graph[7] as TarjanNode<Int>).addAdjacentNode(graph[7])
 
         validateTarjanResults(graph)
+    }
+
+    @Test
+    fun simpleGraphs() {
+        val graph = ArrayList<Node<Int>>()
+        val v0 = TarjanNode(0)
+        val v1 = TarjanNode(1)
+        v0.addAdjacentNode(v1)
+        graph.addAll(listOf(v0, v1))
+
+        validateTarjanResults(graph)
+
+        v1.addAdjacentNode(v0)
+
+        validateTarjanResults(graph)
+
     }
 
     @Test

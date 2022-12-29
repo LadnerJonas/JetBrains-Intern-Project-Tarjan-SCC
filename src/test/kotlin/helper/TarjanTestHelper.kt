@@ -1,10 +1,13 @@
 package helper
 
-import Node
 import Task
+import node.Node
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertEquals
 
+/**
+ * A collection of functions to test the tarjan implementation
+ */
 internal object TarjanTestHelper {
     /**
      * Returns the strongly connected component with the greatest cardinality of a given [nodeList]

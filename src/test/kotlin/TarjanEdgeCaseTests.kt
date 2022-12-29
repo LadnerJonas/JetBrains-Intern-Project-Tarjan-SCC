@@ -1,5 +1,10 @@
+import node.TarjanNode
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertDoesNotThrow
+
+/**
+ * Tests of the behavior of the tarjan algorithm implementation in edge cases
+ */
 
 class TarjanEdgeCaseTests {
     @Test
