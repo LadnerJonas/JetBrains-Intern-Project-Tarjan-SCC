@@ -7,13 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67ba79e9-ace6-4ed0-9d6c-a0e89a9f7ffc" name="Changes" comment="Refactor and improve documentation">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/helper/TarjanNodeData.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/node/Node.kt" afterDir="false" />
+    <list default="true" id="67ba79e9-ace6-4ed0-9d6c-a0e89a9f7ffc" name="Changes" comment="Add Documentation to the README.md file">
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/helper/Kosaraju.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Tarjan.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Tarjan.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TarjanData.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TarjanNode.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/node/TarjanNode.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/TarjanEdgeCaseTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TarjanEdgeCaseTests.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/TarjanFunctionalTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TarjanFunctionalTests.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/helper/TarjanTestHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/helper/TarjanTestHelper.kt" afterDir="false" />
@@ -26,8 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -60,7 +59,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -90,11 +89,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TarjanFunctionalTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TarjanFunctionalTests.bigGraph" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JetBrains-Intern-Projects" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TarjanFunctionalTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="bigGraph" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -109,12 +109,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TarjanFunctionalTests.staticMediumGraph" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JetBrains-Intern-Projects" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TarjanFunctionalTests" />
+      <option name="METHOD_NAME" value="staticMediumGraph" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in JetBrains-Intern-Projects" />
-        <item itemvalue="JUnit.TarjanEdgeCaseTests.noExceptionInEdgeCases" />
-        <item itemvalue="JUnit.TarjanFunctionalTests" />
+        <item itemvalue="JUnit.TarjanFunctionalTests.bigGraph" />
         <item itemvalue="JUnit.TarjanFunctionalTests.simpleGraphs" />
+        <item itemvalue="JUnit.TarjanFunctionalTests.staticMediumGraph" />
+        <item itemvalue="JUnit.TarjanEdgeCaseTests.noExceptionInEdgeCases" />
       </list>
     </recent_temporary>
   </component>
@@ -131,7 +142,11 @@
       <workItem from="1672175053906" duration="5618000" />
       <workItem from="1672238721176" duration="1144000" />
       <workItem from="1672239871963" duration="3840000" />
-      <workItem from="1672328812321" duration="3396000" />
+      <workItem from="1672328812321" duration="4119000" />
+      <workItem from="1672333179029" duration="66000" />
+      <workItem from="1672412800100" duration="4266000" />
+      <workItem from="1672417075854" duration="13103000" />
+      <workItem from="1672490502689" duration="901000" />
     </task>
     <task id="LOCAL-00001" summary="git init">
       <created>1671964444865</created>
@@ -175,7 +190,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672242977208</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Refactor and greatly improve documentation">
+      <created>1672332277701</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1672332277701</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add Documentation to the README.md file">
+      <created>1672415605350</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1672415605350</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,7 +229,24 @@
     <MESSAGE value="refactor test package and add more functional tests" />
     <MESSAGE value="add edge case tests" />
     <MESSAGE value="Refactor and improve documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor and improve documentation" />
+    <MESSAGE value="Refactor and greatly improve documentation" />
+    <MESSAGE value="Add Documentation to the README.md file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Documentation to the README.md file" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="6" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="node.TarjanNode" memberName="payload" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JetBrains_Intern_Projects$TarjanFunctionalTests.ic" NAME="TarjanFunctionalTests Coverage Results" MODIFIED="1672240691292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
