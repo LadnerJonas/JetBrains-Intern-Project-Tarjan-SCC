@@ -31,7 +31,7 @@ All the tests are divided into two groups: [TarjanFunctionalTests.kt](src/test/k
 [TarjanEdgeCaseTests.kt](src/test/kotlin/TarjanEdgeCaseTests.kt).
 
 To further ease the testing of huge graphs, a dynamic testing framework was created, which can found inside the
-[helper](src/test/kotlin/helper) subdirectory. For example the
-[TarjanTestHelper.kt](src/test/kotlin/helper/TarjanTestHelper.kt) file verifiers the output of the Tarjan
+[helper](src/test/kotlin/helper) subdirectory. For example, the
+[TarjanTestHelper.kt](src/test/kotlin/helper/TarjanTestHelper.kt) file verifies the output of the Tarjan
 implementation, by checking the count and content of the strongly connected components (SCC) compared to the 
 [Kosaraju.kt](src/test/kotlin/helper/Kosaraju.kt) algorithm. 
