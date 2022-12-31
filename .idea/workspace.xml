@@ -7,15 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67ba79e9-ace6-4ed0-9d6c-a0e89a9f7ffc" name="Changes" comment="Add Documentation to the README.md file">
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/helper/Kosaraju.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Tarjan.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Tarjan.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TarjanEdgeCaseTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TarjanEdgeCaseTests.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TarjanFunctionalTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TarjanFunctionalTests.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/helper/TarjanTestHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/helper/TarjanTestHelper.kt" afterDir="false" />
-    </list>
+    <list default="true" id="67ba79e9-ace6-4ed0-9d6c-a0e89a9f7ffc" name="Changes" comment="Add Kosaraju.kt to the documentation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,7 +138,7 @@
       <workItem from="1672333179029" duration="66000" />
       <workItem from="1672412800100" duration="4266000" />
       <workItem from="1672417075854" duration="13103000" />
-      <workItem from="1672490502689" duration="901000" />
+      <workItem from="1672490502689" duration="1243000" />
     </task>
     <task id="LOCAL-00001" summary="git init">
       <created>1671964444865</created>
@@ -204,7 +196,35 @@
       <option name="project" value="LOCAL" />
       <updated>1672415605350</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="refactor the tarjan implementation">
+      <created>1672491483018</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1672491483018</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Improve documentation">
+      <created>1672491509905</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1672491509905</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Rewrite the dynamic testing framework by using the Kosaraju algorithm">
+      <created>1672491564681</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1672491564681</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add Kosaraju.kt to the documentation">
+      <created>1672491745521</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1672491745521</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +251,11 @@
     <MESSAGE value="Refactor and improve documentation" />
     <MESSAGE value="Refactor and greatly improve documentation" />
     <MESSAGE value="Add Documentation to the README.md file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Documentation to the README.md file" />
+    <MESSAGE value="refactor the tarjan implementation" />
+    <MESSAGE value="Improve documentation" />
+    <MESSAGE value="Rewrite the dynamic testing framework by using the Kosaraju algorithm" />
+    <MESSAGE value="Add Kosaraju.kt to the documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Kosaraju.kt to the documentation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

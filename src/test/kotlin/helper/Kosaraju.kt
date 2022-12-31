@@ -68,7 +68,7 @@ internal object Kosaraju {
     ) {
         visited[indexMap[currentNode]!!] = true
         currentNode.adjacents()?.forEach {
-            if ((it != null) && indexMap.containsKey(it) && !visited[indexMap[it]!!]) {
+            if (it != null && indexMap.containsKey(it) && !visited[indexMap[it]!!]) {
                 dfs(it, visited, indexMap, stack)
             }
         }
