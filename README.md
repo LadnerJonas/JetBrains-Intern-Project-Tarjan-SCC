@@ -1,6 +1,6 @@
 <div style="text-align: center;"> 
     <h1>JetBrains-Intern-Project-Tarjan-SCC</h1>
-    <h4>Code-Quality: <a href="https://www.codefactor.io/repository/github/ladnerjonas/jetbrains-intern-project-tarjan-scc/badge?s=81648a0e18c9125b926457682b6e56cec5a1519e">
+    <h4 style="text-align: center;">Code-Quality: <a href="https://www.codefactor.io/repository/github/ladnerjonas/jetbrains-intern-project-tarjan-scc/badge?s=81648a0e18c9125b926457682b6e56cec5a1519e">
         <img alt="Codefactor.io Badge" src="https://www.codefactor.io/repository/github/ladnerjonas/jetbrains-intern-project-tarjan-scc/badge?s=81648a0e18c9125b926457682b6e56cec5a1519e" />
     </a></h4>
 </div>
@@ -33,4 +33,5 @@ All the tests are divided into two groups: [TarjanFunctionalTests.kt](src/test/k
 To further ease the testing of huge graphs, a dynamic testing framework was created, which can found inside the
 [helper](src/test/kotlin/helper) subdirectory. For example the
 [TarjanTestHelper.kt](src/test/kotlin/helper/TarjanTestHelper.kt) file verifiers the output of the Tarjan
-implementation, by checking the count and content of the strongly connected components (SCC). 
+implementation, by checking the count and content of the strongly connected components (SCC) compared to the 
+[Kosaraju.kt](src/test/kotlin/helper/Kosaraju.kt) algorithm. 
