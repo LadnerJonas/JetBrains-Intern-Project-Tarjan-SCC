@@ -7,6 +7,9 @@ import org.junit.jupiter.api.assertDoesNotThrow
  */
 
 class TarjanEdgeCaseTests {
+    /**
+     * Tests the behavior of the tarjan implementation against null, empty and small graphs
+     */
     @Test
     fun noExceptionInEdgeCases() {
         assertDoesNotThrow {
