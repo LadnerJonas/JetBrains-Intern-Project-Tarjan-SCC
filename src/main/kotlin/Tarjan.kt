@@ -29,8 +29,8 @@ internal object Task {
     }
 
     /**
-     * Generates the strongly connected component of a subgraph given by the [startingVertex]
-     * [currentIndex] indexes the [startingVertex], which data is saved in the [nodeData]
+     * Generates the strongly connected component of a subgraph given by the [startingNode]
+     * [currentIndex] indexes the [startingNode], which data is saved in the [nodeData]
      * [stack] contains all the nodes currently in the SCC
      * Adds the current SCC to the given [sccList]
      */
@@ -40,28 +40,28 @@ internal object Task {
         nodeData: HashMap<Node<*>, TarjanNodeData>,
         currentIndex: AtomicInteger,
         stack: Stack<Node<*>?>,
-        startingVertex: Node<*>?
+        startingNode: Node<*>?
     ) {
-        if (startingVertex == null) {
+        if (startingNode == null) {
             return
         }
 
-        stack.push(startingVertex)
-        nodeData[startingVertex] = TarjanNodeData(currentIndex.get(), currentIndex.getAndIncrement(), true)
+        stack.push(startingNode)
+        nodeData[startingNode] = TarjanNodeData(currentIndex.get(), currentIndex.getAndIncrement(), true)
 
-        startingVertex.adjacents()?.forEach { adj ->
+        startingNode.adjacents()?.forEach { adj ->
             if (!nodeData.containsKey(adj)) {
                 // visit the adjacent node
                 stronglyConnectedComponent(sccList, nodeData, currentIndex, stack, adj)
-                nodeData[adj]!!.lowlink = min(nodeData[adj]!!.lowlink, nodeData[startingVertex]!!.lowlink)
+                nodeData[startingNode]!!.lowlink = min(nodeData[startingNode]!!.lowlink, nodeData[adj]!!.lowlink)
 
             } else if (nodeData[adj]!!.onStack) {
                 // update the lowest reachable node index, as the adjacent node is in the same SCC
-                nodeData[startingVertex]!!.lowlink = min(nodeData[adj]!!.lowlink, nodeData[startingVertex]!!.index)
+                nodeData[startingNode]!!.lowlink = min(nodeData[startingNode]!!.lowlink, nodeData[adj]!!.index)
             }
         }
 
-        if (nodeData[startingVertex]!!.index == nodeData[startingVertex]!!.lowlink) {
+        if (nodeData[startingNode]!!.lowlink == nodeData[startingNode]!!.index) {
             // form the strong connected component
             val scc = ArrayList<Node<*>>()
             do {
@@ -70,7 +70,7 @@ internal object Task {
                     nodeData[w]!!.onStack = false
                     scc.add(w)
                 }
-            } while (startingVertex != w)
+            } while (startingNode != w)
             sccList.add(scc)
         }
     }
